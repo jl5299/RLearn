@@ -69,4 +69,4 @@ library(plyr)
 tidyData<-aggregate(. ~subject + activity, finalData, mean)
 tidyData<-tidyData[order(tidyData$activity,tidyData$subject),]
 
-#make codebook for github
+write.table(tidyData, "tidyDataExercise.txt", row.name = FALSE)
